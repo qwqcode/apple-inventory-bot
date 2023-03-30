@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  apple_store_bot:
+    container_name: apple_store_bot
+    image: apple_store_bot
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    # restart: always
+    ports:
+      - 17999:8080
+    volumes:
+      - ./.env:/.env
